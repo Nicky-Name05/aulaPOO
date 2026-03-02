@@ -1,3 +1,4 @@
+
 package intervalo;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
@@ -29,11 +30,13 @@ public class Main {
         System.out.printf("digite o numero a ser comparado:\n");
 
         n = Teclado.nextInt();
+        while ( !(menor < n && n < maior)){
+            System.out.printf("entrada inválida!\n");
+            System.out.printf("digite o numero a ser comparado:\n");
 
-        if (menor < n && n < maior){
-
-            System.out.printf("Está no intervalo!\n");
-        } else
-            System.out.printf("Não está no intervalo!\n");
+            n = Teclado.nextInt();
+        }
+        System.out.printf("%d!\n", n);
+        System.out.printf("Está no intervalo!\n");
     }
 }
